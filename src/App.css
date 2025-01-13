@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+#root {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+main.sfu_img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1604856420566-576ba98b53cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNpbXBsZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D') no-repeat center center;
+    background-size: cover;
+    opacity: 0.05; /* Adjust the opacity of the background image */
+    z-index: 1; /* Places it below the text */
+}
+
+main.sfu_img > * {
+    position: relative;
+    z-index: 2
+}
+
+.first {
+    position: absolute;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    opacity: 1;
+}
+
+.myHidden {
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .myHidden {
+      transition: none;
+    }
+    .photoHidden {
+      transition: none;
+    }
+}
+
+i {
+    font-size: 5em;
+}
+
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 0.5rem;
+    background-color: #774E24;
+    padding: 1em;
+    border-radius: 50%;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem; /* Adds subtle distance */
+  font-size: 16px;
+  color: #555;
+}
+
+.scroll-down .arrow {
+  margin-top: 8px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #555;
+  border-right: 2px solid #555;
+  transform: rotate(45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(8px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(4px) rotate(45deg);
+  }
+}
