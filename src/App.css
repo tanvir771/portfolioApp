@@ -67,10 +67,14 @@ section {
     }
 }
 
-i {
+.lglogo {
     font-size: 5em;
 }
 
+.smlogo {
+  font-size: 2em;
+  margin: 5px;
+}
 
 .logos {
     display: flex;
@@ -103,7 +107,7 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem; /* Adds subtle distance */
+  margin-top: 2rem;
   font-size: 16px;
   color: #555;
 }
@@ -128,4 +132,45 @@ i {
   60% {
     transform: translateY(4px) rotate(45deg);
   }
+}
+
+.projectCollection {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.card {
+  background-color: #f9f1f1;
+  transition: ease-in-out all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.025);
+}
+
+.projectCollection {
+  -webkit-overflow-scrolling: touch;
+}
+
+.projectCollection {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: all ease-in-out 0.25s;
+}
+
+.infogit {
+  display: flex;
+}
+
+.infogit i {
+  font-size: 1.5em;
 }

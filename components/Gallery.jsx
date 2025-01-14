@@ -11,7 +11,6 @@ export default function Gallery(photoObj) {
                         </div>
                     </a>
                 </div>
-
             ))}
         </div>
     );
