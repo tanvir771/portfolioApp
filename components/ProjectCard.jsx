@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ProjectCard(props) {
   return (
-    <div class="card relative mx-5 flex flex-col my-6 bg-white shadow-sm rounded-lg w-96">
+    <div class="card relative mx-5 flex flex-col my-6 bg-white shadow-sm rounded-lg w-72 lg:w-96">
       <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
         <img src={props.src} alt="card-image" />
       </div>
