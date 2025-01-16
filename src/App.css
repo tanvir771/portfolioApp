@@ -174,3 +174,7 @@ section {
 .infogit i {
   font-size: 1.5em;
 }
+
+.smlogo:hover {
+  opacity: 80%;
+}
